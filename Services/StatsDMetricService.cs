@@ -38,7 +38,7 @@ namespace StatsDSharp
             var body = $"{metric.Name}:{metric.Value}|{this.GetMetricType(metric.Type)}";
             if (metric.SampleRate > 0)
             {
-                body += $"!@{metric.SampleRate}";
+                body += $"|@{metric.SampleRate}";
             }
             return body;
         }
