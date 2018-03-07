@@ -11,7 +11,7 @@ namespace StatsDSharp
             var statsDConfiguration = new StatsDConfiguration
             {
                 Port = 8125,
-                Host = "10.168.1.12"
+                IP = "10.168.1.12"
             };
 
             var statsDService = new StatsDMetricService(statsDConfiguration);

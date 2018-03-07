@@ -25,7 +25,7 @@ namespace StatsDSharp
         private void SendUDPMessage(string datagram)
         {
             Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            IPAddress serverAddr = IPAddress.Parse(this._configuration.Host);
+            IPAddress serverAddr = IPAddress.Parse(this._configuration.IP);
             IPEndPoint endPoint = new IPEndPoint(serverAddr, this._configuration.Port);
             byte[] send_buffer = Encoding.ASCII.GetBytes(datagram);
             sock.SendTo(send_buffer, endPoint);
